@@ -142,7 +142,7 @@ Make a note of this Fabric Java SDK client application's url. On IBM Cloud dashb
 
 ## 4. Build and deploy webapp
 
-A web application is provided to perform various operations like `Donate Money`, `View Supporters` etc. Web appication code can be found under `webapp` directory.
+A web application is provided to perform various operations like `Donate Money`, `View Supporters` etc. Web application code can be found under `webapp` directory.
 
 This web application invokes rest interfaces implemented in Fabric Java SDK client application as explained above. Hence the web application needs Fabric Java SDK client application url for rest invocations.
 
