@@ -108,22 +108,25 @@ Instantiation of smart contract has to be followed by integrating the blockchain
 
 ## 3. Build the client application based on Fabric Java SDK
 
-Here, we use the [Fabric Java SDK](https://github.ibm.com/shikha-mah/cf-blockchain/tree/master/fabric-java-sdk-app) to build a client to invoke and query chaincode on the hyperledger fabric network.
+Here, we use the [Fabric Java SDK](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/fabric-java-sdk-app) to build a client to invoke and query chaincode on the hyperledger fabric network.
 
-Open the `manifest.yml` file under `fabric-java-sdk-app` directory. Enter the public IP address of the Kubernetes Cluster for the variable `KUBERNETES_IP_ADDRESS`, and save the file.
+Open the `manifest.yml` file under `fabric-java-sdk-app` directory. Under `env` section, update the network admin username and password. Also update Organization Affiliation and Chain Code Name.
 
 ```
 applications:
- - name: blockchain-enabled-crowdfunding-java
-   random-route: true
-   memory: 256M
-   path: target/crowdfunding-java.war
-   buildpack: liberty-for-java
-   env:
-     KUBERNETES_IP_ADDRESS: xx.xx.xx.xx
+- name: blockchain-enabled-crowdfunding-java
+  random-route: true
+  memory: 1024M
+  path: target/crowdfunding-java.war
+  buildpack: java_buildpack
+  env:
+    admin: admin
+    adminpw: admin
+    OrgAffiliation: org1
+    ChainCodeName: crowdfunding
 ```
 
-Next, on the command terminal go to `cf-blockchain` directory, and execute the below commands:
+Next, on the command terminal go to `blockchain-enabled-crowdfunding` directory, and execute the below commands:
 ```
 cd fabric-java-sdk-app
 mvn clean install
