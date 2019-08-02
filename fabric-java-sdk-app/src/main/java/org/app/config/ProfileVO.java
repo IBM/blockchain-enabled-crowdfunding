@@ -55,7 +55,7 @@ public class ProfileVO {
 		if( admin != null ){
 			this.admin = admin;
 		}else{
-			throw new Exception("Could not find Admin Username, in env vars, for regisration");
+			throw new Exception("Could not find Admin Username, in env vars, for registration");
 			//this.admin = "admin";
 		}
 		
