@@ -49,7 +49,7 @@ Follow these steps to setup and run this code pattern. The steps are described i
 
 - Clone the repo using the below command.
    ```
-   git clone https://github.ibm.com/shikha-mah/cf-blockchain
+   git clone https://github.com/IBM/blockchain-enabled-crowdfunding
    ```
 
  - In this repository,
@@ -120,10 +120,10 @@ applications:
   path: target/crowdfunding-java.war
   buildpack: java_buildpack
   env:
-    admin: admin
-    adminpw: admin
-    OrgAffiliation: org1
-    ChainCodeName: crowdfunding
+    admin: <admin-username>
+    adminpw: <admin-password>
+    OrgAffiliation: <affiliation>
+    ChainCodeName: <Chain-Code-Name>
 ```
 
 Next, on the command terminal go to `blockchain-enabled-crowdfunding` directory, and execute the below commands:
