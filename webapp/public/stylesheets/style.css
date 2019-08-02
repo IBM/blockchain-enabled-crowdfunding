@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 650px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: #8B4513; */
+  background: linear-gradient(to bottom, #663300 0%, #996633 100%);
+  /* border: red 2px solid; */
+  /* background-image:url('/img/image.jpg'); */
+}
+
+h1{
+  color: white;
+  font-size: 30px;
+  padding-top: 13px;
+  text-decoration: underline;
+}
+
+/* Style the header */
+header {
+  /* background-color: #666; */
+  /* background-image:url('/img/image.jpg'); */
+  padding-top: 8px;
+  /* padding-bottom: 5px; */
+  height: 220px;
+  text-align: center;
+  /* border: red 2px solid; */
+  /* font-size: 35px;
+  color: white; */
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  /* border: red 2px solid; */
+  height: 350px;
+  padding: 50px;
+  padding-top: 20px;
+  text-align: center;
+  /* height: 800px; only for demonstration, should be removed */
+  /* background: #ccc; */
+  /* background-image:url('/img/image.jpg'); */
+  /* padding: 20px; */
+}
+
+h4{
+  color: white;
+  font-size: 19px;
+  text-align: center;
+}
+
+.circle {
+  height: 70px;
+  width: 70px;
+  background-color: #FFDEAD;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  display: inline-block;
+  position: relative;
+}
+
+circle span {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+}
+
+button{
+  font-size: 20px;
+  width:180px;
+  height:35px;
+}
+
+.buttonsPanel {
+  padding-top: 20px;
+  /* border: red 2px solid; */
+}
+
+p{
+  color: white;
+  font-size: 15px;
+  text-align: justify;
+}
+
+article {
+  float: left;
+  padding-right: 20px;
+  padding-top:0px;
+  width: 70%;
+  /* background-color: #f1f1f1; */
+  /* background-image:url('/img/image.jpg'); */
+  height: 330px; /* only for demonstration, should be removed */
+  /* border: red 2px solid; */
+}
+
+heading {
+  font-size: 16px;
+  text-align: center;
+  margin-left: 40%;
+  text-decoration: underline;
+  font-weight: bold;
+  color:  	#FFDEAD;
+}
+
+highlightedText {
+  font-weight: bold;
+  color:  	#FFDEAD;
+}
+
+h2{
+  color: white;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+/* li{
+  color: white;
+} */
+h3{
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+.note{
+  font-size:19px; 
+  text-align: center;
+}
+
+
+
+
+
+
+/* header.donators{
+  /* background-image:url('/img/image.jpg'); 
+  padding: 20px;
+  height: 100px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+} */
+legend{
+  color: white;
+  font-size: 20px;
+}
+
+label{
+  color: white;
+  font-size: 18px;
+}
+
+
+/* Style the list inside the menu */
+/* nav ul {
+  list-style-type: none;
+  padding: 0;
+} */
+
+
+/* article.plain{
+  float: left;
+  padding: 20px;
+  width: 100%;
+  /* background-color: #f1f1f1; */
+  /* background-image:url('/img/image.jpg'); 
+  height: 500px;
+} */
+
+/* Clear floats after the columns */
+/* section:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+th, td {
+  text-align: center;
+  color:white;
+  font-size:18px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  /* border: 2px red solid; */
+}
+input {
+  height: 30px;
+  width: 350px;
+  font-size: 14pt;
+}
+.dashboardTable {
+  float: left;
+  margin-left: 2px;
+  width: 100%;
+  /* padding: 2px; */
+  /*display: none;*/
+  border: 1px solid black;
+}
+
+.dashboardTable thead tr{
+  background-color: #FFDEAD;
+}
+
+.dashboardTable tbody tr{
+  background-color: #FFDEAD;
+}
+
+.dashboardTable thead th{
+  color: black;
+}
+
+.dashboardTable tbody td{
+  color: black;
+}
+
+.position {
+  padding: 10px;
+  /* border: 1px solid black; */
+  display: inline-block;
+  align-content: center;
+  width: 100%;
+}
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
