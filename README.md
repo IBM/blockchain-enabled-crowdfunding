@@ -23,8 +23,9 @@ When the reader has completed this Code Pattern, they will understand how to:
 2. Deploy the client application using Fabric Java SDK. It works as middle layer and exposes REST API.
 3. Deploy Web UI application built using NodeJs.
 4. User can perform following task using the web interface which internally interacts with Blockchain Network with the help of middle layer.
+   * Current status of Funds raised
    * Donate for the cause
-   * View all Donations made
+   * View all Supporters who have donated
 
 
 # Pre-requisites
@@ -41,7 +42,7 @@ Follow these steps to setup and run this code pattern. The steps are described i
 1. [Get the code](#1-get-the-code)
 2. [Create IBM Cloud Services](#2-create-ibm-cloud-services)
 3. [Setup Hyperledger Fabric Network using Kubernetes on IBM Cloud](#3-setup-hyperledger-fabric-network-using-kubernetes-on-ibm-cloud)
-3. [Build the client application based on Fabric Java SDK](#3-build-the-client-application-based-on-fabric-java-sdk)
+3. [Build the client application using Fabric Java SDK](#3-build-the-client-application-using-fabric-java-sdk)
 4. [Build and deploy webapp](#4-build-and-deploy-webapp)
 5. [Analyze the Results](#5-analyze-the-results)
 
@@ -53,10 +54,10 @@ Follow these steps to setup and run this code pattern. The steps are described i
    ```
 
  - In this repository,
-    * [Chaincode ](https://github.ibm.com/shikha-mah/cf-blockchain/blob/master/crowdfunding_smartcontract.go):
+    * [Chaincode ](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/chaincode):
     Go lang based smart contract with application logic that has to be installed on the network.
-    * [Client code using Fabric Java SDK](https://github.ibm.com/shikha-mah/cf-blockchain/tree/master/fabric-java-sdk-app): application code built using Fabric Java SDK to invoke and query chaincode on the hyperledger fabric network. The operations are exposed as ReST APIs when deployed enabling other applications to consume.
-    * [Web application code](https://github.ibm.com/shikha-mah/cf-blockchain/tree/master/WEB): NodeJS based application code to render UI and integrates with the ReST APIs exposed by the client application built on Fabric Java SDK.
+    * [Client code using Fabric Java SDK](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/fabric-java-sdk-app): application code built using Fabric Java SDK to invoke and query chaincode on the hyperledger fabric network. The operations are exposed as ReST APIs when deployed enabling other applications to consume.
+    * [Web application code](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/webapp): NodeJS based application code to render UI and integrates with the REST APIs exposed by the client application built on Fabric Java SDK.
 
 ## 2. Create IBM Cloud Services
 
@@ -64,7 +65,7 @@ Follow these steps to setup and run this code pattern. The steps are described i
 
 Create a Kubernetes cluster with [Kubernetes Service](https://cloud.ibm.com/containers-kubernetes/catalog/cluster) using IBM Cloud Dashboard. This pattern uses the _free cluster_.
 
-  ![](images/create_service.png)
+  ![](images/create_kubernetes_service.png)
 
   > Note: It can take up to 15-20 minutes for the cluster to be set up and provisioned.  
 
@@ -72,7 +73,7 @@ Create a Kubernetes cluster with [Kubernetes Service](https://cloud.ibm.com/cont
 
 Create IBM Blockchain Platform service instance using IBM Cloud Dashboard.
 
- ![](images/create_blockchain_service.png)
+ ![](images/create_IBP_service.png)
  
 ## 3. Setup Hyperledger Fabric Network on IBM Blockchain Platform on IBM Cloud
 
@@ -84,10 +85,10 @@ The blockchain network should consist of two organizations with single peer each
 
 ### Deploy Smart Contract on IBM Blockchain Platform
 
-Smart contract(chaincode) is available at `<dir str>`.
+Smart contract(chaincode) is available [here](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/chaincode).
 
 **Package the smart contract**
-To package follow the instructions provided [here](https://developer.ibm.com/tutorials/quick-start-guide-for-ibm-blockchain-platform/) as step 12. For your convenience, packaged smart contract(.cds) is also provided in repo at `dir str`. Use this file during install smart contract.
+To package follow the instructions provided [here](https://developer.ibm.com/tutorials/quick-start-guide-for-ibm-blockchain-platform/) as step 12. For your convenience, packaged smart contract(crowdfunding@1.1.cds) is also provided in repo at `blockchain-enabled-crowdfunding/chaincode/`. Use this file to install smart contract.
 
 **Install and Instantiate smart contract**
 
@@ -98,19 +99,21 @@ To package follow the instructions provided [here](https://developer.ibm.com/tut
 
 Instantiation of smart contract has to be followed by integrating the blockchain network with Fabric Java SDK. Follow the below steps to download `Connection Profile`.
 
-* Under `Instantiated smart contracts` section, click on list of options(three dots) for your smart contract. Click on `Connect with SDK` option.
+* Under `Instantiated smart contracts` section, click on the three vertical dots for your smart contract as shown. Click on `Connect with SDK` option.
+  ![](images/connect_with_sdk.png)
+  
 * Provide the `MSP name` and `Certificate Authority`. Scroll down and click on `Download Connection Profile`.
 
-![](images/connectionprofile.png)
+  ![](images/download_connection_profile.png)
 
 * Rename the downloaded json file as `connection_profile.json`.
 * Place this file in `fabric-java-sdk-app/src/main/resources/`. It gets loaded through `ConnectionProfileLoader.java`
 
-## 3. Build the client application based on Fabric Java SDK
+## 3. Build the client application using Fabric Java SDK
 
-Here, we use the [Fabric Java SDK](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/fabric-java-sdk-app) to build a client to invoke and query chaincode on the hyperledger fabric network.
+Here, we use the [Fabric Java SDK App](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/fabric-java-sdk-app) to build a client to invoke and query chaincode on the hyperledger fabric network.
 
-Open the `manifest.yml` file under `fabric-java-sdk-app` directory. Under `env` section, update the network admin username and password. Also update Organization Affiliation and Chain Code Name.
+Open the `manifest.yml` file under `fabric-java-sdk-app` directory. Under `env` section, provide the valid credentials for an user who can execute transactions in the network. Also update Organization Affiliation and Chaincode name.
 
 ```
 applications:
@@ -123,8 +126,9 @@ applications:
     admin: <admin-username>
     adminpw: <admin-password>
     OrgAffiliation: <affiliation>
-    ChainCodeName: <Chain-Code-Name>
+    ChainCodeName: <Chaincode-Name>
 ```
+> Note: In this pattern, we are using admin credentails directly for executing transactions and not registering a new user.
 
 Next, on the command terminal go to `blockchain-enabled-crowdfunding` directory, and execute the below commands:
 ```
@@ -138,7 +142,7 @@ Make a note of this Fabric Java SDK client application's url. On IBM Cloud dashb
 
 ## 4. Build and deploy webapp
 
-A web application is provided to perform various operations like `Donate Money`, `View Donations` etc. Web appication code can be found under `WEB` directory.
+A web application is provided to perform various operations like `Donate Money`, `View Supporters` etc. Web appication code can be found under `webapp` directory.
 
 This web application invokes rest interfaces implemented in Fabric Java SDK client application as explained above. Hence the web application needs Fabric Java SDK client application url for rest invocations.
 
@@ -146,13 +150,7 @@ Perform the following steps:
 
 - Update the Java application url, as noted in section [Build the client application based on Fabric Java SDK](#3-build-the-client-application-based-on-fabric-java-sdk) in `config.js` file, found in the root folder of web application.
 
-- On command prompt navigate to web application root folder. Run the command
-  ```
-  npm install
-  ```
-  This installs all the necessary libraries.
-
-- Next you will deploy the web application to IBM Cloud. Deploy the application to IBM Cloud using the command
+- Deploy the application to IBM Cloud using the command:
   ```
   ibmcloud cf push
   ```
@@ -160,19 +158,19 @@ Perform the following steps:
 
 ## 5. Analyze the Results
 
-Login to `IBM Cloud`. On the `Dashboard`, verify that an app `blockchain-enabled-crowdfunding-webui` is running fine. Click on the web application entry. When application page opens, click on `Visit App URL`. Web application login page opens.
-
-You will be presented with the tasks that you can perform.
+Login to `IBM Cloud`. On the `Dashboard`, verify that an app `blockchain-enabled-crowdfunding-webui` is running fine. Click on the web application entry. When application page opens, click on `Visit App URL`. Web application page opens.
 
 ![](images/eventDetails.png)
 
-There are no donations done by default. So create one or more donations. To create a new donation click on `DONATE FUND`. Enter need details.
+It shows the crowdfunding project details, current status of funds raised and the tasks that you can perform.
+
+There are no donations done by default. To donate, click on `Donate`. 
 
 ![](images/donationForm.png)
 
-Fill in your personal details and click on `DONATE NOW` button to donate. A pop up message appears with the result of the donation request . Click `OK`. You can create more donations. Once done click on `BACK` button to return to tasks list.
+Provide the required details and click on `Donate Now` to donate. A pop up message appears with the result of the donation request . Click `OK`. Once done click on `Back` button to return to tasks list.
 
-Click on `View Donations` to view the list of Donations done, as shown in below image.
+Click on `View Supporters` to view the list of supporters who have donated, as shown in below image.
 
 ![](images/viewDonations.png)
 
@@ -183,8 +181,7 @@ See [Debugging.md](./Debugging.md)
 # Learn More
 
 - [Track donations with Blockchain](https://developer.ibm.com/patterns/track-donations-blockchain/)
-- [Why NGOs need collaboration?](https://www.theguardian.com/global-development/poverty-matters/2012/mar/13/ngos-need-third-way-collaboration)
-- [Understand Business-NGO partnerships](https://blogs.worldbank.org/publicsphere/why-collaborate-three-frameworks-understand-business-ngo-partnerships)
+- 
 
 <!-- keep this -->
 ## License
