@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Supporters</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  
+  <body class="body">
+    <!-- <p></p> -->
+    <br/>
+    <center> 
+      <h2>Our Supporters</h2>
+    </center>
+    <br/>
+    
+    <table id="dashtable"  border="1" class="dashboardTable">
+        <thead>
+          <tr>
+            <th>S.No.</th>
+            <th>Donator Name</th>
+            <th>Donated Amount ($)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (var i=0; i<donations.length; i++){ %>
+            <tr>
+              <td>
+                <%= (i+1) %>
+              </td>
+              <td>
+                <%= names[i] %>
+              </td>
+              <td>
+                <%= amount[i] %>
+              </td>
+            </tr>
+              <% } %>
+        </tbody>
+    </table>
+
+    <div class="position">
+        <center>
+            <form > 
+              <button type="submit" name="back" id="back" formaction='/'> Back </button> 
+            </form>
+        </center>
+    </div>
+    
+  </body>
+</html>
