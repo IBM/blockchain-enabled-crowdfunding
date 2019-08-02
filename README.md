@@ -88,7 +88,7 @@ The blockchain network should consist of two organizations with single peer each
 Smart contract(chaincode) is available [here](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/chaincode).
 
 **Package the smart contract**
-To package follow the instructions provided [here](https://developer.ibm.com/tutorials/quick-start-guide-for-ibm-blockchain-platform/) as step 12. For your convenience, packaged smart contract(crowdfunding@1.1.cds) is also provided in repo at `blockchain-enabled-crowdfunding/chaincode/`. Use this file to install smart contract.
+To package follow the instructions provided [here](https://developer.ibm.com/tutorials/quick-start-guide-for-ibm-blockchain-platform/) as step 12. For your convenience, packaged smart contract(.cds) is also provided in repo under `chaincode` directory. Use this file to install smart contract.
 
 **Install and Instantiate smart contract**
 
@@ -148,7 +148,12 @@ This web application invokes rest interfaces implemented in Fabric Java SDK clie
 
 Perform the following steps:
 
-- Update the Java application url, as noted in section [Build the client application based on Fabric Java SDK](#3-build-the-client-application-based-on-fabric-java-sdk) in `config.js` file, found in the root folder of web application.
+- Run the below command.
+  ```
+  cd webapp
+  ```
+  
+- Update the Java application url (as noted in section 3) in `config.js` file of `webapp` directory. 
 
 - Deploy the application to IBM Cloud using the command:
   ```
