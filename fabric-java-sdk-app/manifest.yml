@@ -1,0 +1,11 @@
+ applications:
+  - name: blockchain-enabled-crowdfunding-java
+    random-route: true
+    memory: 1024M
+    path: target/crowdfunding-java.war
+    buildpack: java_buildpack
+    env:
+      admin: admin
+      adminpw: admin
+      OrgAffiliation: org1
+      ChainCodeName: crowdfunding
