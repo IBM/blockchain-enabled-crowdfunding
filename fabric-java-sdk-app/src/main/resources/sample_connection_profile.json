@@ -1,0 +1,47 @@
+{
+    "name": "channel1",
+    "description": "Network on IBP v2",
+    "version": "1.0.0",
+    "client": {
+        "organization": "org1msp"
+    },
+    "organizations": {
+        "org1msp": {
+            "mspid": "org1msp",
+            "peers": [
+                "xxx.xxx.xxx.xxx:31292"
+            ],
+            "certificateAuthorities": [
+                "xxx.xxx.xxx.xxx:31373"
+            ]
+        }
+    },
+    "orderers": {
+        "xxx.xxx.xxx.xxx:31794": {
+            "url": "grpcs://xxx.xxx.xxx.xxx:31794",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxKxjQ4xt/YC\n-----END CERTIFICATE-----\n"
+            }
+        }
+    },
+    "peers": {
+        "xxx.xxx.xxx.xxx:31292": {
+            "url": "grpcs://xxx.xxx.xxx.xxx:31292",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICITxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxTlDgX0FSiXjYwd8IoPlYOzm\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "xxx.xxx.xxx.xxx"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "xxx.xxx.xxx.xxx": {
+            "url": "https://184.172.233.196:31373",
+            "caName": "ca",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\r\nMIICezCCAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxQbWuUCGi0cdtGTnN3\r\n-----END CERTIFICATE-----\r\n"
+            }
+        }
+    }
+}
