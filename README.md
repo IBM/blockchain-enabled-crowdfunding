@@ -11,9 +11,9 @@ Here is a blockchain enabled solution for Crowdfunding supporting "Go Green Move
 
 When the reader has completed this Code Pattern, they will understand how to:
 
-- Setup blockchain Network using IBP.
+- Setup blockchain Network using IBM Blockchain Platform
 - Interact with blockchain network using Fabric Java SDK
-- Build a client application which will interact with blockchain network with the help of SDK
+- Build a client application which will interact with blockchain network with the help of Java SDK
 
 # Flow
 
@@ -41,10 +41,10 @@ Follow these steps to setup and run this code pattern. The steps are described i
 
 1. [Get the code](#1-get-the-code)
 2. [Create IBM Cloud Services](#2-create-ibm-cloud-services)
-3. [Setup Hyperledger Fabric Network using Kubernetes on IBM Cloud](#3-setup-hyperledger-fabric-network-using-kubernetes-on-ibm-cloud)
-3. [Build the client application using Fabric Java SDK](#3-build-the-client-application-using-fabric-java-sdk)
-4. [Build and deploy webapp](#4-build-and-deploy-webapp)
-5. [Analyze the Results](#5-analyze-the-results)
+3. [Setup Hyperledger Fabric Network using IBM Blockchain Platform](#3-setup-hyperledger-fabric-network-using-ibm-blockchain-platform)
+4. [Build the client application using Fabric Java SDK](#4-build-the-client-application-using-fabric-java-sdk)
+5. [Build and deploy webapp](#5-build-and-deploy-webapp)
+6. [Analyze the Results](#6-analyze-the-results)
 
 ## 1. Get the code
 
@@ -179,14 +179,11 @@ Click on `View Supporters` to view the list of supporters who have donated, as s
 
 ![](images/viewDonations.png)
 
-# Troubleshooting
-See [Debugging.md](./Debugging.md)
-
 
 # Learn More
 
-- [Track donations with Blockchain](https://developer.ibm.com/patterns/track-donations-blockchain/)
-- 
+- [IBM Blockchain Platform - Quick start guide](https://developer.ibm.com/tutorials/quick-start-guide-for-ibm-blockchain-platform/)
+- [Learn about Crowdfunding](https://en.wikipedia.org/wiki/Crowdfunding)
 
 <!-- keep this -->
 ## License
