@@ -8,10 +8,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-family: Arial, Helvetica, sans-serif;
-  /* background-color: #8B4513; */
   background: linear-gradient(to bottom, #663300 0%, #996633 100%);
   /* border: red 2px solid; */
-  /* background-image:url('/img/image.jpg'); */
 }
 
 h1{
@@ -23,15 +21,10 @@ h1{
 
 /* Style the header */
 header {
-  /* background-color: #666; */
-  /* background-image:url('/img/image.jpg'); */
   padding-top: 8px;
-  /* padding-bottom: 5px; */
   height: 220px;
   text-align: center;
   /* border: red 2px solid; */
-  /* font-size: 35px;
-  color: white; */
 }
 
 /* Create two columns/boxes that floats next to each other */
@@ -43,10 +36,6 @@ nav {
   padding: 50px;
   padding-top: 20px;
   text-align: center;
-  /* height: 800px; only for demonstration, should be removed */
-  /* background: #ccc; */
-  /* background-image:url('/img/image.jpg'); */
-  /* padding: 20px; */
 }
 
 h4{
@@ -95,9 +84,7 @@ article {
   padding-right: 20px;
   padding-top:0px;
   width: 70%;
-  /* background-color: #f1f1f1; */
-  /* background-image:url('/img/image.jpg'); */
-  height: 330px; /* only for demonstration, should be removed */
+  height: 330px;
   /* border: red 2px solid; */
 }
 
@@ -121,9 +108,6 @@ h2{
   text-decoration: underline;
 }
 
-/* li{
-  color: white;
-} */
 h3{
   color: white;
   font-size: 18px;
@@ -135,19 +119,6 @@ h3{
   text-align: center;
 }
 
-
-
-
-
-
-/* header.donators{
-  /* background-image:url('/img/image.jpg'); 
-  padding: 20px;
-  height: 100px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-} */
 legend{
   color: white;
   font-size: 20px;
@@ -158,29 +129,6 @@ label{
   font-size: 18px;
 }
 
-
-/* Style the list inside the menu */
-/* nav ul {
-  list-style-type: none;
-  padding: 0;
-} */
-
-
-/* article.plain{
-  float: left;
-  padding: 20px;
-  width: 100%;
-  /* background-color: #f1f1f1; */
-  /* background-image:url('/img/image.jpg'); 
-  height: 500px;
-} */
-
-/* Clear floats after the columns */
-/* section:after {
-  content: "";
-  display: table;
-  clear: both;
-} */
 th, td {
   text-align: center;
   color:white;
@@ -189,17 +137,17 @@ th, td {
   padding-left: 10px;
   /* border: 2px red solid; */
 }
+
 input {
   height: 30px;
   width: 350px;
   font-size: 14pt;
 }
+
 .dashboardTable {
   float: left;
   margin-left: 2px;
   width: 100%;
-  /* padding: 2px; */
-  /*display: none;*/
   border: 1px solid black;
 }
 
