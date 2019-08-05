@@ -1,19 +1,18 @@
 ## ** Work in progress **
 # Blockchain enabled Crowdfunding
-**Demonstrate the use of Hyperledger Fabric for building a collaboration platform for Crowd Funding.**
+**Demonstrate the use of Hyperledger Fabric for building a collaboration platform for Crowdfunding**
 
-Crowdfunding is practice of funding that operates independently of any government and is a way for people, businesses and charities to raise money. Its a way of raising finance by asking a large number of people each for a small amount of money.
-People invest simply because they believe in the cause.
+Crowdfunding is practice of funding that operates independently of any government and is a way for people, businesses and charities to raise money. Its a way of raising finance by asking a large number of people each for a small amount of money. People invest simply because they believe in the cause.
 
 Green areas also have a huge role in protection of ecosystems. As forest lands and natural ecosystems reduce just because of the urbanization and creation of the cities, it is necessary to make sure biodiversity is not reducing or at least not becoming extinct. Green areas make cities and neighborhoods more attractive places for people to live and work. Although people like cities, because they are more convenient places for living, they need some rural influence as well, beside lack of plants and trees can even make living impossible.
 
 Here is a blockchain enabled solution for Crowdfunding supporting "Go Green Movement", in which people with a diverse/same portfolios can come forward and be a part of this moment by funding for the cause. This network will give the holistic view of the requirement and its current status. This way a need is catered to in an efficient manner. The problems of over collection or under collection for a need is reduced. The platform brings in trust, accountability and transparency of operations.
 
-When the reader has completed this Code Pattern, they will understand how to:
+When the reader has completed this code pattern, they will understand how to:
 
-- Setup blockchain Network using IBM Blockchain Platform
-- Interact with blockchain network using Fabric Java SDK
-- Build a client application which will interact with blockchain network with the help of Java SDK
+- Setup blockchain Network using IBM Blockchain Platform(IBP)
+- Interact with IBP using Fabric Java SDK
+- Build a nodejs client application which will interact with blockchain network with the help of Fabric Java SDK application
 
 # Flow
 
