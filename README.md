@@ -2,11 +2,11 @@
 # Blockchain enabled Crowdfunding
 **Demonstrate the use of Hyperledger Fabric for building a collaboration platform for Crowdfunding**
 
-Crowdfunding is practice of funding that operates independently of any government and is a way for people, businesses and charities to raise money. Its a way of raising finance by asking a large number of people each for a small amount of money. People invest simply because they believe in the cause.
+Crowdfunding is practice of funding that operates independently of any government and is a way for people, businesses and charities to raise money. Its a way of raising finance by asking a large number of people each for a small amount of money. People invest simply because they believe in the cause. There are several types of crowdfunding(donation based/rewards based/debt/equity) but not all types of crowdfunding are regulated by Financial Conduct Authority.
 
-Green areas also have a huge role in protection of ecosystems. As forest lands and natural ecosystems reduce just because of the urbanization and creation of the cities, it is necessary to make sure biodiversity is not reducing or at least not becoming extinct. Green areas make cities and neighborhoods more attractive places for people to live and work. Although people like cities, because they are more convenient places for living, they need some rural influence as well, beside lack of plants and trees can even make living impossible.
+Crowdfunding idea has lots of good but at the same time there is a big opportunity for fraud. People are concerned about being scammed by a fraudulent request. It is because of lack of transparency and trust. There were few reported cases of fraud – particularly when compared to the number of transactions and amounts involved. This pattern showcases the use of Hyperledger Fabric network to build a platform to aid crowdfunding. The problems of over collection or under collection for a need is reduced. The platform brings in trust, accountability and transparency of operations.
 
-Here is a blockchain enabled solution for Crowdfunding supporting "Go Green Movement", in which people with a diverse/same portfolios can come forward and be a part of this moment by funding for the cause. This network will give the holistic view of the requirement and its current status. This way a need is catered to in an efficient manner. The problems of over collection or under collection for a need is reduced. The platform brings in trust, accountability and transparency of operations.
+In this pattern, we have taken an example of the crowdfunding event - "Raise funds to increase Green Cover".
 
 When the reader has completed this code pattern, they will understand how to:
 
