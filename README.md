@@ -32,7 +32,7 @@ When the reader has completed this code pattern, they will understand how to:
 * [IBM Cloud Account](https://cloud.ibm.com)
 * [Git Client](https://git-scm.com/downloads) - needed for clone commands.
 * [Maven](https://maven.apache.org/install.html)
-* [Nodejs](https://nodejs.org/en/download/)
+* [IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started)
 
 # Steps
 
@@ -55,7 +55,7 @@ Follow these steps to setup and run this code pattern. The steps are described i
  - In this repository,
     * [Chaincode ](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/chaincode):
     Go lang based smart contract with application logic that has to be installed on the network.
-    * [Client code using Fabric Java SDK](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/fabric-java-sdk-app): application code built using Fabric Java SDK to invoke and query chaincode on the hyperledger fabric network. The operations are exposed as ReST APIs when deployed enabling other applications to consume.
+    * [Client code using Fabric Java SDK](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/fabric-java-sdk-app): application code built using Fabric Java SDK to invoke and query chaincode on the hyperledger fabric network. The operations are exposed as REST APIs when deployed enabling other applications to consume.
     * [Web application code](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/webapp): NodeJS based application code to render UI and integrates with the REST APIs exposed by the client application built on Fabric Java SDK.
 
 ## 2. Create IBM Cloud Services
