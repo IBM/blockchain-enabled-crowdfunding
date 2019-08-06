@@ -40,7 +40,6 @@ router.get('/', function(req, res, next) {
       request.post(options1, function(error,response,body){
         var raisedAmount = JSON.parse(body['donated']);
         res.render( 'donationForm', {title : 'donationForm', raisedAmount : raisedAmount, date:eventStartDate});
-        // res.render( 'donationForm', {title : 'donationForm', raisedAmount : 1000, date:"13-07-2019"});
       });
 });
 
