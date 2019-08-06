@@ -175,6 +175,7 @@ It shows the crowdfunding project details, current status of funds raised and th
 # Learn More
 
 - [IBM Blockchain Platform - Quick start guide](https://developer.ibm.com/tutorials/quick-start-guide-for-ibm-blockchain-platform/)
+- [How-to use Fabric Java SDK with a TLS-enabled Hyperledger Fabric Network](https://developer.ibm.com/tutorials/hyperledger-fabric-java-sdk-for-tls-enabled-fabric-network/)
 - [Learn about Crowdfunding](https://en.wikipedia.org/wiki/Crowdfunding)
 
 <!-- keep this -->
