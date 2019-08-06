@@ -111,7 +111,7 @@ Instantiation of smart contract has to be followed by integrating the blockchain
 ## 3. Build the client application using Fabric Java SDK
 
 
-[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/fabric-java-sdk-app&branch=master)
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/IBM/blockchain-enabled-crowdfunding/fabric-java-sdk-app&branch=master)
 
 
 Here, we use the [Fabric Java SDK App](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/fabric-java-sdk-app) to build a client to invoke and query chaincode on the hyperledger fabric network.
