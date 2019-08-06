@@ -46,11 +46,4 @@ router.post('/', function(req, res) {
   });
 });
 
-// router.get('/', function(req, res) {
-//     var donation_id = [11,12,13];
-//     var donated_amount = [100,200,300];
-//     var user_name = ["A", "B", "C"];
-//     res.render('viewSupporters',{donations : donation_id, amount : donated_amount, names: user_name});
-// });
-
 module.exports = router;
