@@ -4,11 +4,11 @@ var bodyParser = require("body-parser");
 var request = require("request");
 const path = require('path');
 var config = require("../config");
-// var user={};
 var executed = false;
 var eventStartDate = "";
 
 router.get('/', function(req, res) {
+  //get the event start date as of application launch date
   if (!executed) {
       executed = true;
       var startDate = new Date();
@@ -33,6 +33,7 @@ router.get('/', function(req, res) {
         body : {},
         json : true
       };
+      //Update event start date in blockchain network when it is launched first time
       request.post(options, function(err, response, b){
         if (!err) {
           var url2 = config.rest_base_url + "/UpdateEventStartDateServlet";
@@ -78,6 +79,7 @@ router.get('/', function(req, res) {
             body : {},
             json : true
           };
+      // Get the event details from blockchain network
       request.post(options, function(err, response1, body1){
         if (!err) {
           var url = config.rest_base_url + "/QueryEventServlet";
@@ -101,7 +103,6 @@ router.get('/', function(req, res) {
             res.render( 'eventDetails', {eventName: eventName, orgDetails: orgDetails, eventDetails: eventDetails, raisedAmount: raisedAmount, amount: amount, goalReachedPrecentage: goalReachedPrecentage, eventDuration: eventDuration, eventDate:eventDate});
           });
         }
-       // res.render( 'eventDetails', {raisedAmount: 0, quantity: 10000, goalReachedPrecentage: 0, eventDuration: 20, date:"13-07-2019"});
       });
     }
 });
