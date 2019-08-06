@@ -70,7 +70,7 @@ Create a Kubernetes cluster with [Kubernetes Service](https://cloud.ibm.com/cont
 
 **Create IBM Blockchain Platform Service**
 
-Create IBM Blockchain Platform service instance using IBM Cloud Dashboard.
+Create [IBM Blockchain Platform service](https://cloud.ibm.com/catalog/services/blockchain-platform) instance using IBM Cloud Dashboard.
 
  ![](images/create_IBP_service.png)
  
@@ -80,14 +80,15 @@ In this step, we will setup the Hyperledger Fabric network using IBM Blockchain 
 
 ### Create Hyperledger Fabric Network on IBM Blockchain Platform
 
-The blockchain network should consist of two organizations with single peer each and an orderer service for carrying out all the transactions. For detailed steps to create fabric network, please refer to the [quick start guide for IBM Blockchain Platform](https://developer.ibm.com/tutorials/quick-start-guide-for-ibm-blockchain-platform/).
+Follow this [tutorial](https://developer.ibm.com/tutorials/quick-start-guide-for-ibm-blockchain-platform/) to create fabric network using IBM Blockchain Platform. The blockchain network should consist of two organizations with single peer each and an orderer service for carrying out all the transactions. 
 
 ### Deploy Smart Contract on IBM Blockchain Platform
 
 Smart contract(chaincode) is available [here](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/chaincode).
 
 **Package the smart contract**
-To package follow the instructions provided [here](https://developer.ibm.com/tutorials/quick-start-guide-for-ibm-blockchain-platform/) as step 12. For your convenience, packaged smart contract(.cds) is also provided in repo under `chaincode` directory. Use this file to install smart contract.
+
+To package follow the instructions provided [here](https://developer.ibm.com/tutorials/quick-start-guide-for-ibm-blockchain-platform/) as step 12. For your convenience, packaged smart contract(.cds) is also provided in repo under `chaincode` directory. You can use this file directly to install smart contract.
 
 **Install and Instantiate smart contract**
 
@@ -99,6 +100,7 @@ To package follow the instructions provided [here](https://developer.ibm.com/tut
 Instantiation of smart contract has to be followed by integrating the blockchain network with Fabric Java SDK. Follow the below steps to download `Connection Profile`.
 
 * Under `Instantiated smart contracts` section, click on the three vertical dots for your smart contract as shown. Click on `Connect with SDK` option.
+
   ![](images/connect_with_sdk.png)
   
 * Provide the `MSP name` and `Certificate Authority`. Scroll down and click on `Download Connection Profile`.
@@ -108,7 +110,7 @@ Instantiation of smart contract has to be followed by integrating the blockchain
 * Rename the downloaded json file as `connection_profile.json`.
 * Place this file in `fabric-java-sdk-app/src/main/resources/`. It gets loaded through `ConnectionProfileLoader.java`
 
-## 3. Build the client application using Fabric Java SDK
+## 4. Build the client application using Fabric Java SDK
 
 Here, we use the [Fabric Java SDK App](https://github.com/IBM/blockchain-enabled-crowdfunding/tree/master/fabric-java-sdk-app) to build a client to invoke and query chaincode on the hyperledger fabric network.
 
@@ -139,7 +141,7 @@ Login to `IBM Cloud`. On the `Dashboard`, verify that an app `blockchain-enabled
 
 Make a note of this Fabric Java SDK client application's url. On IBM Cloud dashboard, click on the application. When application page opens, click on `Visit App URL`. Now make a note of the url, as shown on the browser, even if the page shows some error. If the url ends with a `/` then remove the trailing forward slash. This url should be provided in web application that interacts with this Fabric Java SDK client application.
 
-## 4. Build and deploy webapp
+## 5. Build and deploy webapp
 
 A web application is provided to perform various operations like `Donate Money`, `View Supporters` etc. Web application code can be found under `webapp` directory.
 
@@ -160,7 +162,7 @@ Perform the following steps:
   ```
   Deployment might take a few minutes to complete. Ensure that there are no errors while deploying the application.
 
-## 5. Analyze the Results
+## 6. Analyze the Results
 
 Login to `IBM Cloud`. On the `Dashboard`, verify that an app `blockchain-enabled-crowdfunding-webui` is running fine. Click on the web application entry. When application page opens, click on `Visit App URL`. Web application page opens.
 
