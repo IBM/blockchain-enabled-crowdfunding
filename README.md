@@ -129,13 +129,13 @@ applications:
     OrgAffiliation: <affiliation>
     ChainCodeName: <Chaincode-Name>
 ```
-> Note: In this pattern, we are using admin credentails directly for executing transactions and not registering a new user.
+> Note: In this pattern, we are using admin credentails directly for executing transactions.
 
 Next, on the command terminal go to `blockchain-enabled-crowdfunding` directory, and execute the below commands:
 ```
-cd fabric-java-sdk-app
-mvn clean install
-ibmcloud cf push
+  cd fabric-java-sdk-app
+  mvn clean install
+  ibmcloud cf push
 ```
 Login to `IBM Cloud`. On the `Dashboard`, verify that an app `blockchain-enabled-crowdfunding-java` is running fine.
 
@@ -143,7 +143,7 @@ Make a note of this Fabric Java SDK client application's url. On IBM Cloud dashb
 
 ## 5. Build and deploy webapp
 
-A web application is provided to perform various operations like `Donate Money`, `View Supporters` etc. Web application code can be found under `webapp` directory.
+A web application is provided to perform various operations like `Donate`, `View Supporters` etc. Web application code can be found under `webapp` directory.
 
 This web application invokes rest interfaces implemented in Fabric Java SDK client application as explained above. Hence the web application needs Fabric Java SDK client application url for rest invocations.
 
@@ -166,20 +166,11 @@ Perform the following steps:
 
 Login to `IBM Cloud`. On the `Dashboard`, verify that an app `blockchain-enabled-crowdfunding-webui` is running fine. Click on the web application entry. When application page opens, click on `Visit App URL`. Web application page opens.
 
-![](images/eventDetails.png)
+It shows the crowdfunding project details, current status of funds raised and the tasks that you can perform. To donate, click on `Donate`. Provide the required details and click on `Donate Now` to donate. Click on `View Supporters` to view the list of supporters who have donated.
 
-It shows the crowdfunding project details, current status of funds raised and the tasks that you can perform.
+![](images/demo.gif)
 
-There are no donations done by default. To donate, click on `Donate`. 
-
-![](images/donationForm.png)
-
-Provide the required details and click on `Donate Now` to donate. A pop up message appears with the result of the donation request . Click `OK`. Once done click on `Back` button to return to tasks list.
-
-Click on `View Supporters` to view the list of supporters who have donated, as shown in below image.
-
-![](images/viewDonations.png)
-
+*Note: The images used in UI are downloaded from internet which are free to use and share.*
 
 # Learn More
 
