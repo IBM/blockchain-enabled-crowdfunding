@@ -2,15 +2,15 @@
 # Blockchain enabled Crowdfunding
 **Demonstrate the use of Hyperledger Fabric for building a collaboration platform for Crowdfunding**
 
-Crowdfunding is practice of funding that operates independently of any government and is a way for people, businesses and charities to raise money. Its a way of raising finance by asking a large number of people each for a small amount of money. People invest simply because they believe in the cause. There are several types of crowdfunding(donation based/rewards based/debt/equity) but not all types of crowdfunding are regulated by Financial Conduct Authority.
+Crowdfunding is practice of funding that operates independently of any government and is a way for people, businesses and charities to raise money. It is a way of raising finance by asking a large number of people each for a small amount of money. People invest simply because they believe in the cause. There are several types of crowdfunding(donation based/rewards based/debt/equity) but not all types of crowdfunding are regulated by Financial Conduct Authority.
 
-Crowdfunding idea has lots of good but at the same time there is a big opportunity for fraud. People are concerned about being scammed by a fraudulent request. It is because of lack of transparency and trust. There were few reported cases of fraud – particularly when compared to the number of transactions and amounts involved. This pattern showcases the use of Hyperledger Fabric network to build a platform to aid crowdfunding. The problems of over collection or under collection for a need is reduced. The platform brings in trust, accountability and transparency of operations.
+Crowdfunding idea has lots of good but at the same time there is a big opportunity for fraud. People are concerned about being scammed by a fraudulent request. It is because of lack of transparency and trust. There were few reported cases of fraud – particularly when compared to the number of transactions and amounts involved. This pattern showcases the blockchain enabled crowdfunding platform which uses Hyperledger Fabric network to build a platform to aid crowdfunding. It will help to build trust, accountability and transparency of operations.
 
-In this pattern, we have taken an example of the crowdfunding event - "Raise funds to increase Green Cover".
+In this code pattern, we have taken an example of the crowdfunding event - "Raise funds to increase Green Cover".
 
 When the reader has completed this code pattern, they will understand how to:
 
-- Setup blockchain Network using IBM Blockchain Platform(IBP)
+- Setup blockchain network using IBM Blockchain Platform(IBP)
 - Interact with IBP using Fabric Java SDK
 - Build a nodejs client application which will interact with blockchain network with the help of Fabric Java SDK application
 
