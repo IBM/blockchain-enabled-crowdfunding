@@ -170,7 +170,7 @@ It shows the crowdfunding project details, current status of funds raised and th
 
 ![](images/demo.gif)
 
-*Note: The images used in UI are downloaded from internet which are free to use and share.*
+> *Note: The images used in UI are downloaded from internet which are free to use and share.*
 
 # Learn More
 
