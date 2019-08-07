@@ -31,7 +31,7 @@ When the reader has completed this code pattern, they will understand how to:
 
 * [IBM Cloud Account](https://cloud.ibm.com)
 * [Git Client](https://git-scm.com/downloads) - needed for clone commands.
-* [Maven](https://maven.apache.org/install.html)
+* [Maven](https://maven.apache.org/install.html) - needed to build the client. Maven is a build automation tool used primarily for Java projects.
 * [IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started)
 
 # Steps
