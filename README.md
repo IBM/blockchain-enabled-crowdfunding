@@ -1,4 +1,4 @@
-## ** Work in progress **
+ 
 # Blockchain enabled Crowdfunding
 **Demonstrate the use of Hyperledger Fabric for building a collaboration platform for Crowdfunding**
 
