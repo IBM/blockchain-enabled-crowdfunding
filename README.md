@@ -1,12 +1,14 @@
  
-# Blockchain enabled Crowdfunding
-**Demonstrate the use of Hyperledger Fabric for building a collaboration platform for Crowdfunding**
+# Build a network to support blockchain-enabled crowdfunding
+**Demonstrate the use of Hyperledger Fabric for building a collaborative crowdfunding platform**
 
-Crowdfunding is practice of funding that operates independently of any government and is a way for people, businesses and charities to raise money. It is a way of raising finance by asking a large number of people each for a small amount of money. People invest simply because they believe in the cause. There are several types of crowdfunding (donation based/rewards based/debt/equity) but not all types of crowdfunding are regulated by Financial Conduct Authority.
+Crowdfunding is practice of funding that operates independently of any government and is a way for people, businesses and charities to raise money. It is a way of raising finance by asking a large number of people each for a small amount of money. People invest simply because they believe in the cause. There are several types of crowdfunding (donation based, rewards based, debt, equity) but not all types of crowdfunding are regulated by government organizations like the UK's Financial Conduct Authority.
 
-Crowdfunding is a great idea but at the same time there is a big opportunity for fraud. People are concerned about being scammed by fraudulent requests. It is because of lack of transparency and trust. There were few reported cases of fraud – particularly when compared to the number of transactions and amounts involved. This code pattern showcases the blockchain enabled crowdfunding platform which uses Hyperledger Fabric network to build a platform to aid crowdfunding. It will help to build trust, accountability and transparency of operations.
+Crowdfunding has many benefits, but it also comes with a substantial risk of fraud -- as well as a number of potential risks, such as loss of money, locked-in investment, lack of income, and lack of information. Many people worry about being scammed by a fraudulent request, due in large part to crowdfunding's lack of transparency and trust. There have been few reported cases of fraud in crowdfunding -- particularly when compared to the number of transactions and amounts involved -- however as the number of crowdfunding platforms grows, so does the risk that platform operators themselves may engage in or enable fraud.
 
-In this code pattern, we have taken an example of the crowdfunding event - "Raise funds to increase Green Cover".
+This code pattern showcases blockchain-enabled crowdfunding by showing you how to use a Hyperledger Fabric network to build a platform to aid crowdfunding. This network provides a holistic view of the requirement and its current status -- which helps to address the need more efficiently, and reduces the problems of over-collection or under-collection for a need. All of this means that the platform creates trust, accountability, and operational transparency.
+
+In this code pattern, we have taken an example of the crowdfunding event - **"Raise funds to increase Green Cover"**.
 
 When the reader has completed this code pattern, they will understand how to:
 
