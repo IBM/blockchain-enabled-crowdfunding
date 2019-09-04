@@ -55,6 +55,14 @@ This pattern showcases the blockchain enabled crowdfunding which uses Hyperledge
 ![Architecture](https://github.com/IBM/blockchain-enabled-crowdfunding/blob/master/images/architecture.png)
 
 
+1. Setup Blockchain Network using IBM Blockchain Platform on IBM Cloud.
+2. Deploy the client application using Fabric Java SDK. It works as middle layer and exposes REST API.
+3. Deploy Web UI application built using NodeJs.
+4. User can perform following task using the web interface which internally interacts with Blockchain Network with the help of middle layer.
+   * Current status of Funds raised
+   * Donate for the cause
+   * View all Supporters who have donated
+   
 # Instructions
 
 > Find the detailed steps for this pattern in the [readme file](https://github.com/IBM/blockchain-enabled-crowdfunding/blob/master/README.md) 
