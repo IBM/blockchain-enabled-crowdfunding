@@ -131,7 +131,7 @@ applications:
     OrgAffiliation: <affiliation>
     ChainCodeName: <Chaincode-Name>
 ```
-> Note: In this pattern, we are using admin credentails directly for executing transactions.
+> Note: In this pattern, we are using admin credentials directly for executing transactions.
 
 Next, on the command terminal go to `blockchain-enabled-crowdfunding` directory, and execute the below commands:
 ```
