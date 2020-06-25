@@ -39,7 +39,7 @@ When the reader has completed this code pattern, they will understand how to:
 # Steps
 
 ### Deployment using IBP Extension on VSCode
-If you want to deploy this code pattern using IBP extension on VSCode, please refer [README-VSCodeDeploy.md](https://github.com/IBM/blockchain-enabled-crowdfunding/blob/local-deployment-branch/README-VSCodeDeploy.md)
+If you want to deploy this code pattern using IBP extension on VSCode, please refer [README-VSCodeDeploy.md](https://github.com/IBM/blockchain-enabled-crowdfunding/blob/local-deployment-branch/README-VSCodeDeploy.md).
 
 ### Deployment on IBM Cloud using IBM Blockchain Platform
 Follow these steps to setup and run this code pattern. The steps are described in detail below.
