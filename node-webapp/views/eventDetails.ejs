@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Crowdfunding Event</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+
+</head>
+
+<body class="body">
+    <center>
+      <h1> <%= eventName %> </h1>
+    </center>
+  
+    <div> <header>
+        <img src = "/img/1.png" height="210" width="380"/>
+        <img src = "/img/2.png" height="210" width="220"/>
+        <img src = "/img/3.png" height="210" width="380"/>
+      </header>
+    </div>
+
+    <section>
+      <nav>
+        <h4 style="background-color: white; color:red;font-size:24px">Goal:</label>  $<%= amount %></h4>
+        <!-- <h4 style="color:lightgreen;font-size:22px"><label style="color:lightgreen;font-size:22px" >Raised</label>  Rs.<%= raisedAmount %></h4> -->
+        <h4>Raised: $<%= raisedAmount %></h4>
+        <h4>Start Date: <%= eventDate %></h4>
+        <h4>Duration: <%= eventDuration %> Days</h4>
+        <div class="circle" font style="color:black;">
+          <circle><span><%= goalReachedPrecentage %>% Raised!</span></circle>
+        </div>
+        <div class="buttonsPanel">
+            <form><button type="submit" name="Donate" id="donation" formaction="/donationForm">Donate</button> </form>
+            <form method="POST"> <button type="submit" name="Donater" id="donater" formaction="/viewSupporters">View Supporters</button></form>
+        </div>
+      </nav>
+
+      <article>
+        <p> 
+          <heading> About this Project </heading> </p>
+        
+         <p> <highlightedText> Who are we? </highlightedText> <br/>
+          <%= orgDetails %>
+        </p>
+
+        <p> <highlightedText> Why this campaign? </highlightedText> <br/>
+          <%= eventDetails %>
+        </p>
+          
+        <p> We encourage every one to participate in this!
+        </p>
+      </article>
+    </section>
+</body>
+
+</html>

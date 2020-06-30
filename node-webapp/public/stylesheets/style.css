@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 650px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #663300 0%, #996633 100%);
+  /* border: red 2px solid; */
+}
+
+h1{
+  color: white;
+  font-size: 30px;
+  padding-top: 13px;
+  text-decoration: underline;
+}
+
+/* Style the header */
+header {
+  padding-top: 8px;
+  height: 220px;
+  text-align: center;
+  /* border: red 2px solid; */
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  /* border: red 2px solid; */
+  height: 350px;
+  padding: 50px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+h4{
+  color: white;
+  font-size: 19px;
+  text-align: center;
+}
+
+.circle {
+  height: 70px;
+  width: 70px;
+  background-color: #FFDEAD;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  display: inline-block;
+  position: relative;
+}
+
+circle span {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+}
+
+button{
+  font-size: 20px;
+  width:180px;
+  height:35px;
+}
+
+.buttonsPanel {
+  padding-top: 20px;
+  /* border: red 2px solid; */
+}
+
+p{
+  color: white;
+  font-size: 15px;
+  text-align: justify;
+}
+
+article {
+  float: left;
+  padding-right: 20px;
+  padding-top:0px;
+  width: 70%;
+  height: 330px;
+  /* border: red 2px solid; */
+}
+
+heading {
+  font-size: 16px;
+  text-align: center;
+  margin-left: 40%;
+  text-decoration: underline;
+  font-weight: bold;
+  color:  	#FFDEAD;
+}
+
+highlightedText {
+  font-weight: bold;
+  color:  	#FFDEAD;
+}
+
+h2{
+  color: white;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+h3{
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+.note{
+  font-size:19px; 
+  text-align: center;
+}
+
+legend{
+  color: white;
+  font-size: 20px;
+}
+
+label{
+  color: white;
+  font-size: 18px;
+}
+
+th, td {
+  text-align: center;
+  color:white;
+  font-size:18px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  /* border: 2px red solid; */
+}
+
+input {
+  height: 30px;
+  width: 350px;
+  font-size: 14pt;
+}
+
+.dashboardTable {
+  float: left;
+  margin-left: 2px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.dashboardTable thead tr{
+  background-color: #FFDEAD;
+}
+
+.dashboardTable tbody tr{
+  background-color: #FFDEAD;
+}
+
+.dashboardTable thead th{
+  color: black;
+}
+
+.dashboardTable tbody td{
+  color: black;
+}
+
+.position {
+  padding: 10px;
+  /* border: 1px solid black; */
+  display: inline-block;
+  align-content: center;
+  width: 100%;
+}
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}

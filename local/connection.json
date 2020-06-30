@@ -1,0 +1,55 @@
+{
+    "name": "basic-network",
+    "version": "1.0.0",
+    "client": {
+        "organization": "Org1MSP",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300",
+                    "eventHub": "300",
+                    "eventReg": "300"
+                },
+                "orderer": "300"
+            }
+        }
+    },
+    "channels": {
+        "mychannel": {
+            "orderers": [
+                "orderer"
+            ],
+            "peers": {
+                "Org1Peer1": {}
+            }
+        }
+    },
+    "organizations": {
+        "Org1MSP": {
+            "mspid": "Org1MSP",
+            "peers": [
+                "Org1Peer1"
+            ],
+            "certificateAuthorities": [
+                "Org1CA"
+            ]
+        }
+    },
+    "orderers": {
+        "orderer": {
+            "url": "grpc://localhost:17056"
+        }
+    },
+    "peers": {
+        "Org1Peer1": {
+            "url": "grpc://localhost:17051",
+            "eventUrl": "grpc://localhost:17053"
+        }
+    },
+    "certificateAuthorities": {
+        "Org1CA": {
+            "url": "http://localhost:17050",
+            "caName": "ca"
+        }
+    }
+}
