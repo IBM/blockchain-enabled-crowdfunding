@@ -1,0 +1,23 @@
+{
+  "name": "react-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "underscore": "x.x.x",
+    "fabric-ca-client": "1.2.0",
+    "fabric-client": "1.2.0",
+    "cors": "2.8.4",
+    "grpc": "1.11.0",
+    "nopt": "^4.0.1",
+    "async": "2.6.1"
+  }
+}

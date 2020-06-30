@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>Donate Now</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+
+</head>
+
+<script>
+  function donatenow() {
+    var startdate= '<%= date %>'
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+  
+    if (dd < 10) {
+      dd = '0' + dd
+    }
+  
+    if (mm < 10) {
+      mm = '0' + mm
+    }
+  
+    today = mm + '/' + dd + '/' + yyyy;
+  
+    const date1 = new Date(startdate);
+    const date2 = new Date(today);
+    const diffTime = Math.abs(date2.getTime() - date1.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    var raisedAmount = '<%=raisedAmount%>';
+    var amount = document.getElementById('amount').value
+    var total= parseInt(raisedAmount)+parseInt(amount);
+    if( total>5000 || diffDays>20 ){
+        alert("Donation request is not submitted successfully. ");
+    }else{
+        alert("Donation request is submitted successfully. ");
+    }
+  }
+</script>
+  
+<body class="body">
+  <br/>
+  <center><h2>Donation Form</h2></center>
+  
+  <article>
+    <br/>
+    <br/>
+    <p><font style="font-size:22px">Please provide your contact details.</style></p>
+    <br/>
+
+    <div>
+      <form method="POST">
+        <table>
+          <tr>
+            <td>Name </td>
+            <td><input type="text" name="name" id="name" /></td>
+          </tr>
+
+          <tr>
+            <td>Email ID </td>
+            <td><input type="text" name="email" id="email" /></td>
+          </tr>
+          
+          <tr>
+            <td>Contact No. </td>
+            <td><input type="text" name="phone" id="phone" /></td>
+          </tr>
+
+          <tr>
+            <td>Amount ($) </td>
+            <td><input type="text" name="amount" id="amount" /></td>
+          </tr>
+        </table>
+        <br/>
+        <center>
+          <textarea name="note" style="height:80px;width:100%;font-size:14pt;" size="80" rows="5" cols="100" placeholder="Drop a hearty note!"></textarea>
+        </center>
+        <br/>
+        <center>
+          <button type="submit" name="Donater" id="donater" formaction="/donateFund" onclick="donatenow()">Donate Now</button> 
+        </center>
+      </form>
+      <form>
+        <center>
+          <button type="submit" name="Donate" id="donation" formaction="/">Back</button>    
+        </center>
+      </form>
+    </div>
+  </article>
+
+  <nav>
+    <br/>
+    <center>
+        <fieldset style="border: 1px white solid; padding: 10px;">
+            <legend>THANK YOU !</legend>
+            <p class="note">
+                In the beginning, we started with educating 2-3 people. From there we grew and today we have an organisation where main aim is to protect our environment. We are able to do all this because of you. Thanks to donors like you!!
+            </p>
+        </fieldset>
+    </center>
+  </nav>
+</body>
+
+</html>
