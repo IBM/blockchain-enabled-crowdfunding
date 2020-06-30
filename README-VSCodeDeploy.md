@@ -39,7 +39,7 @@ Install IBP extension in VS Code.
   
 * Copy the smart contract `chaincode/crowdfunding.go` in `$HOME/chaincode/src/demo/`. 
 
-* Set GOPATH as $HOME/chaincode, GOROOT as <go install directory>, and append PATH with $GOROOT/bin.
+* Ensure paths are set correctly. GOPATH as `$HOME/chaincode`, GOROOT as `< go install directory >`, and PATH has `$GOROOT/bin`.
   
 * Open the `demo` folder in VS Code.
 
@@ -51,7 +51,7 @@ Install IBP extension in VS Code.
 
 * You will be prompted for the package name and version. It’s important to provide the proper version as the smart contract can then be upgraded to deploy a newer version. After you’ve provided this information, the smart contract package will be created.
 
-* In the left navigation panel, you should be able to see a .cds file named <package name>@<version>.
+* In the left navigation panel, you should be able to see a .cds file named `<package name>@<version>`.
   
 
 ### 4. Start the Fabric Network
@@ -101,19 +101,21 @@ In this repository, a sample connection profile is already provided. Need to cha
 
 The middle-layer uses the Hyperledger Fabric SDK to communicate with a blockchain network. Build the client application using Fabric Node SDK. To start that, perform the following steps.
 
-Local Update `/etc/hosts` file with following entries
-  ```
-  127.0.0.1 peer0.org1.example.com
-  127.0.0.1 ca.example.com
-  127.0.0.1 orderer.example.com
-  ```
+* Go to directory `fabric-node-sdk-app`
+* Open file `routes/index.js`
+* Check `CA` settings at `line 205-211`
+* Check chaincode name and version at `line 219-221`
+* Save the file
+
+Go to terminal and execute following steps.
 
   ```
-  cd backend
+  cd fabric-node-sdk-app
   npm install
   PORT=30001 DEPLOY_TYPE=local npm start
   ```
-  
+You should see the message on your terminal as - `Successfully enrolled admin user "admin"`.
+
 ### 9. Deploy webapp
 
 * Run the webapp using the following commands.
