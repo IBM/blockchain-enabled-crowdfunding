@@ -1,5 +1,5 @@
 
-# No longer maintained!! This repository has been archived.
+## NOTE: This repository has been archived and no longer maintained!
 
 
 # Build a network to support blockchain-enabled crowdfunding
