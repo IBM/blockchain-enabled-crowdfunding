@@ -16,7 +16,7 @@
     "fabric-ca-client": "1.2.0",
     "fabric-client": "1.2.0",
     "cors": "2.8.4",
-    "grpc": "1.11.0",
+    "grpc": "1.24.9",
     "nopt": "^4.0.1",
     "async": "2.6.1"
   }
